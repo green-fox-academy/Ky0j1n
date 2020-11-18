@@ -1,0 +1,29 @@
+header{
+    background-image: url("anakin.png.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+
+}
+.head{
+   padding-top: 350px;
+   padding-left: 26%
+}
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+li{
+    list-style-type: square;
+}
+q{
+    font-size: 33px;
+    color:white;
+}
+.quote{
+    width: 115%;
+    background-color: rgba(128, 128, 128, 0.438);
+    margin-left: -50px;
+    height: 80px;
+}
+

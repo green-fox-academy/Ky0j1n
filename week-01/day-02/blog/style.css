@@ -1,0 +1,57 @@
+header{
+    background-color: #2E7A2D;
+    padding-left: 10%;
+    height: 10%;
+}
+h3{
+    margin-top: 0;
+}
+
+button{
+    display: block;
+    background-color: gold;
+    margin-top: 5px;
+    }
+button:active{
+        background:orange;
+    }
+#window {
+    width: 100%;
+    height: 100px;
+    padding-top: 0;
+
+    
+}
+h4{
+    margin: 10px 0 0 0;
+}
+#button{
+    margin-top: 5px;
+    border-radius: 6px;
+}
+.kecske{
+    border: 2px solid gold;
+    margin-bottom: 6px;
+}
+input{
+    border: 2px solid gold;
+    background-color: oldlace;
+}
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.kecske{
+    text-align: center;
+}
+h2{
+    text-align: left;
+    margin-left: 22px;
+    color: rgba(236, 17, 54, 0.966)
+}
+h1{
+    margin: 0;
+}
+body{
+    background-color: cyan;
+}
