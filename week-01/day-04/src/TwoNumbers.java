@@ -1,5 +1,5 @@
 public class TwoNumbers {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println(13 + 2);
         System.out.println(13 - 22);
         System.out.println(22 * 13);
