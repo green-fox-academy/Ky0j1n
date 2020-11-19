@@ -1,0 +1,78 @@
+body{
+    background-image: url("assets/topography/topography.png");
+    padding: 0, 10%;
+}
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#logo{
+    height: 80px;
+    width: 80px;
+    position: relative;
+    left: 5%;
+}
+header{
+    background-color: #333333;
+    height:80px;
+    width: 100%;
+    position: relative;   
+}
+#home{
+    position: absolute;
+    top: 20px;
+    right: 600px;
+}
+#wiki{
+    position: absolute;
+    top: 20px;
+    right: 480px;
+}
+#github{
+    
+   position: absolute;
+   top: 20px;
+   right: 320px;
+
+}
+
+#linkedin{
+    position: absolute;
+    top: 20px;
+    right: 120px;
+}
+a:link {
+    font-size: 33px;
+    color:#ff0099;
+   
+}
+a:visited {
+    color:#ff0099;
+}  
+a:hover {
+    color:rgb(250, 100, 31);
+}
+#name{
+    margin-top: 5%;
+    font-size: 55px;
+
+}
+h2{
+    color:#ff0099;
+    font-size:33px;
+}
+p{
+    line-height: 2.5;
+    font-family:consolas;
+    src: url(assets/font/CONSOLA.TTF);
+    font-size: 18px;
+}
+#separator{
+    display:flex;
+    justify-content: center;
+    letter-spacing: 15px;
+}
+h3{
+    text-align: center;
+    font-size: 28px;
+}
