@@ -22,8 +22,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../day-04/src" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.GuessTheNumber">
+  <component name="RunManager" selected="Application.DrawTriangle">
+    <configuration name="AverageOfInput" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AverageOfInput" />
+      <module name="UserInput" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CountFromTo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CountFromTo" />
       <module name="UserInput" />
@@ -33,13 +41,6 @@
     </configuration>
     <configuration name="DrawTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DrawTriangle" />
-      <module name="UserInput" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FizzBuzz" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FizzBuzz" />
       <module name="UserInput" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -61,11 +62,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GuessTheNumber" />
         <item itemvalue="Application.DrawTriangle" />
-        <item itemvalue="Application.FizzBuzz" />
+        <item itemvalue="Application.GuessTheNumber" />
         <item itemvalue="Application.CountFromTo" />
         <item itemvalue="Application.Multiplication" />
+        <item itemvalue="Application.AverageOfInput" />
       </list>
     </recent_temporary>
   </component>
@@ -81,26 +82,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605862749700">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605891878482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605862749700" />
-    <state width="1493" height="192" key="GridCell.Tab.0.bottom" timestamp="1605887760675">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605891878482" />
+    <state width="1493" height="192" key="GridCell.Tab.0.bottom" timestamp="1605902416274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605887760675" />
-    <state width="1493" height="192" key="GridCell.Tab.0.center" timestamp="1605887760674">
+    <state width="1493" height="192" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605902416274" />
+    <state width="1493" height="192" key="GridCell.Tab.0.center" timestamp="1605902416274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605887760674" />
-    <state width="1493" height="192" key="GridCell.Tab.0.left" timestamp="1605887760674">
+    <state width="1493" height="192" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605902416274" />
+    <state width="1493" height="192" key="GridCell.Tab.0.left" timestamp="1605902416274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605887760674" />
-    <state width="1493" height="192" key="GridCell.Tab.0.right" timestamp="1605887760675">
+    <state width="1493" height="192" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605902416274" />
+    <state width="1493" height="192" key="GridCell.Tab.0.right" timestamp="1605902416274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605887760675" />
+    <state width="1493" height="192" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605902416274" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1605887454981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -117,5 +118,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605887454981" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1605892632008">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605892632008" />
   </component>
 </project>
