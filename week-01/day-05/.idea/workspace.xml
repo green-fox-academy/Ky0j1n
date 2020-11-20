@@ -23,7 +23,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../day-04/src" />
   </component>
-  <component name="RunManager" selected="Application.DrawTriangle">
+  <component name="RunManager" selected="Application.GuessTheNumber">
     <configuration name="CountFromTo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CountFromTo" />
       <module name="UserInput" />
@@ -45,6 +45,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GuessTheNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GuessTheNumber" />
+      <module name="UserInput" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Multiplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Multiplication" />
       <module name="UserInput" />
@@ -52,20 +59,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PartyIndicator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PartyIndicator" />
-      <module name="UserInput" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GuessTheNumber" />
         <item itemvalue="Application.DrawTriangle" />
         <item itemvalue="Application.FizzBuzz" />
         <item itemvalue="Application.CountFromTo" />
         <item itemvalue="Application.Multiplication" />
-        <item itemvalue="Application.PartyIndicator" />
       </list>
     </recent_temporary>
   </component>
@@ -85,48 +85,37 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605862749700" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1605884496373">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1605887454980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605884496373" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1605884496372">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605887454980" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1605887454980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605884496372" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1605884496372">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605887454980" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1605887454980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605884496372" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1605884496373">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605887454980" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1605887454980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605884496373" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1605884454567">
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605887454980" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1605887454981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605884454567" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1605884454566">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605887454981" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1605887454981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605884454566" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1605884454566">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605887454981" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1605887454981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605884454566" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1605884454567">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605887454981" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1605887454981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605884454567" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/DrawTriangle.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605887454981" />
   </component>
 </project>
