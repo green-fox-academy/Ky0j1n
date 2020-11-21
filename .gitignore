@@ -5,7 +5,7 @@
 ### Java ###
 # Compiled class file
 *.class
-*.idea
+
 # Log file
 *.log
 
@@ -28,3 +28,11 @@
 hs_err_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/java
+#
+#Green Fox Style Guide
+*.idea
+out
+*.iml
+*.xml
+
+
