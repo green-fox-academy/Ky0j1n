@@ -3,21 +3,21 @@ public class ConditionalVariableMutations {
         double a = 24;
         int out = 0;
         // if a is even increment out by one
-       if(24 % 2 == 0 ) {
+        if (24 % 2 == 0) {
             out++;
-           System.out.println(out);
-       }
+            System.out.println(out);
+        }
 
         int b = 13;
         String out2 = "";
         // if b is between 10 and 20 set out2 to "Sweet!"
         // if less than 10 set out2 to "Less!",
         // if more than 20 set out2 to "More!"
-        if(b > 10 && b < 20){
-            out2= "Sweet!";
-        }else if (b < 10) {
+        if (b > 10 && b < 20) {
+            out2 = "Sweet!";
+        } else if (b < 10) {
             out2 = "Less!";
-        }else{
+        } else {
             out2 = "More!";
         }
 
@@ -32,11 +32,11 @@ public class ConditionalVariableMutations {
         // if credits are smaller than 50,
         // and isBonus is false decrement c by 1
         // if isBonus is true c should remain the same
-        if (credits >= 50 && isBonus == false){
+        if (credits >= 50 && isBonus == false) {
             c -= 2;
-        }else if( credits < 50 && isBonus == false) {
+        } else if (credits < 50 && isBonus == false) {
             c--;
-        }else if(isBonus == true) {
+        } else if (isBonus == true) {
             c = c;
         }
 
@@ -52,11 +52,11 @@ public class ConditionalVariableMutations {
         // if time is more than 200
         // set out3 to "Time out"
         // otherwise set out3 to "Run Forest Run!"
-        if(d % 4 == 0 && time <= 200){
+        if (d % 4 == 0 && time <= 200) {
             out3 = "check";
-        }else if(time > 200){
+        } else if (time > 200) {
             out3 = "Time out";
-        }else{
+        } else {
             out3 = "Run Forest Run!";
         }
 
