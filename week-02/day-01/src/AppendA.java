@@ -9,12 +9,12 @@
 
 public class AppendA {
 
-    public static String appendAFunc(String input){
+    public static String appendAFunc(String input) {
         input = input + "a";
         return input;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String typo = "Chinchill";
         System.out.println(appendAFunc(typo));
 
