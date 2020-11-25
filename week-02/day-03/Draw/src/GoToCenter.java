@@ -4,17 +4,30 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Diagonals {
-    public static void mainDraw(Graphics graphics) {
-        // Draw the canvas' diagonals.
-        // If it starts from the upper-left corner it should be green, otherwise it should be red.
-        graphics.setColor(Color.GREEN);
-        graphics.drawLine(0, 0, WIDTH, HEIGHT);
-        graphics.setColor(Color.RED);
-        graphics.drawLine(WIDTH, 0, 0, HEIGHT);
+
+public class GoToCenter {
+
+    public static void center(int x, int y,  Graphics inputLocation) {
+
+        Graphics location = inputLocation;
+
+        location.drawLine(x, y, WIDTH / 2, HEIGHT / 2);
 
 
     }
+
+    public static void mainDraw(Graphics graphics) {
+        // Create a function that draws a single line and takes 3 parameters:
+        // The x and y coordinates of the line's starting point and the graphics
+        // and draws a line from that point to the center of the canvas.
+        // Draw at least 3 lines with that function using a loop.
+        for(int i = 0; i < 3; i++){
+            ;
+            center(40 * i, 20 * i, graphics);
+        }
+    }
+
+
 
     // Don't touch the code below
     static int WIDTH = 320;
