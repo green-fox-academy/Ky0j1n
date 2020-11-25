@@ -4,6 +4,7 @@
 
 public class Reverse {
     public static String reverse(String input) {
+
         String a = input;
         String reversed = "";
         for (int i = a.length() - 1; i >= 0; i--) {

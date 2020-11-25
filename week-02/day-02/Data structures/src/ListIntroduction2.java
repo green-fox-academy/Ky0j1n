@@ -28,23 +28,24 @@ public class ListIntroduction2 {
         listB.remove("Durian");
         String container = listA.get(3);
         listA.add(4, "Kiwifruit");
-//        listA.add(container);
+        listA.add(container);
         System.out.println(listA);
+        System.out.println(listA.size() == listB.size());
 //        Easier way to comper the sizes?
-        int a = listA.size();
-        int b = listB.size();
+//        int a == listA.size();
+//        int b = listB.size();
 //        how to make this continuously keep it true or false?
 //        When list size changes the statment become -1
-        if (a == b) {
-            System.out.println("List size are equal!");
-        } else {
-            System.out.println("List size are not equal!");
-        }
+//        if (a == b) {
+//            System.out.println("List size are equal!");
+//        } else {
+//            System.out.println("List size are not equal!");
+//        }
         System.out.println(listA.indexOf("Avocado"));
         System.out.println(listB.indexOf("Durian"));
         List<String> extra = Arrays.asList("Passion Fruit", "Pomelo");
         listB.addAll(extra);
-        System.out.println(b);
+//        System.out.println(b);
         System.out.println(listA.get(2));
     }
 }

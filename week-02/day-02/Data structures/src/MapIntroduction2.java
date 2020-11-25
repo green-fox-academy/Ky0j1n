@@ -37,14 +37,14 @@ public class MapIntroduction2 {
         papers.put("978-1-60309-461-0", "The Lab");
 
 
-//Explonation pls!
+
         for (String title : papers.keySet()) {
             String letter = papers.get(title);
         }
-        for (Map.Entry<String, String> reversedOrder : papers.entrySet()) {
-            System.out.println(reversedOrder.getValue()
+        for (Map.Entry<String, String> entry : papers.entrySet()) {
+            System.out.println(entry.getValue()
                     + " (ISBN: " +
-                    reversedOrder.getKey());
+                    entry.getKey());
         }
         papers.remove("The Lab");
 
