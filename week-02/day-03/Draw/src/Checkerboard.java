@@ -4,20 +4,32 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class PurpleSteps3d {
+public class Checkerboard {
+    public static Integer sizeOfTheSquares(int inputsize) {
+        int size = inputsize / 8;
+        return size;
+    }
+
     public static void mainDraw(Graphics graphics) {
-        // Reproduce this:
-        // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/assets/r4.png]
-        graphics.setColor(new Color(252, 201, 185));
-        int startAt = 0;
-        for (int i = 1; i < 8; i++) {
-            int size = 10;
-            size = size * i;
-            graphics.fill3DRect(startAt, startAt, size, size, true);
-            startAt = startAt + (10 * i);
+        // Fill the canvas with a checkerboard pattern.
+        int size = sizeOfTheSquares(WIDTH);
+
+        for (int i = 0; i < 8; i++) {
+
+            for (int j = 0; j < 8; j++) {
+
+                if(((j%2) !=0) && ((i%2)==0) || ((j%2) ==0) && ((i%2) !=0)){
+                    graphics.setColor(Color.YELLOW);
+                    graphics.fillRect(size *j, (size * i),size,size);
+
+                }else{
+                    graphics.setColor(Color.GREEN);
+                    graphics.fillRect(size *j, (size * i),size,size);
+                }
+
+            }
+
         }
-
-
     }
 
     // Don't touch the code below
