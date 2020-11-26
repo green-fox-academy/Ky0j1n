@@ -13,7 +13,10 @@ public class ConnectTheDots {
             x[i] = input[i][0];
             y[i] = input[i][1];
         }
-        graphics.drawPolygon(x, y, 4);
+        graphics.setColor(Color.GREEN);
+        graphics.drawPolygon(x, y, input.length);
+
+
     }
 
 
@@ -26,8 +29,11 @@ public class ConnectTheDots {
         // {120, 100}, {85, 130}, {50, 100}}
 
         int[][] box = {{10, 10}, {290, 10}, {290, 290}, {10, 290}};
+        int[][] data =  {{50, 100}, {70, 70}, {80, 90}, {90, 90}, {100, 70}, {120, 100}, {85, 130}, {50, 100}};
 
         connectDots(box, graphics);
+        connectDots(data,graphics);
+
 
 
     }
