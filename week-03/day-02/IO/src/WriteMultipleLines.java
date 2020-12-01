@@ -28,7 +28,7 @@ public class WriteMultipleLines {
 
     public static void main(String[] args) {
 
-        Path filePath = Paths.get("new.txt");
+        Path filePath = Paths.get("apple.txt");
         String word = "apple";
         int number = 5;
         try {
