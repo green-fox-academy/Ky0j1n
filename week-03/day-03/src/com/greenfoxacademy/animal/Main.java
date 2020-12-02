@@ -11,7 +11,7 @@ public class Main {
 
     Animal tiger = new Animal();
        tiger.play();
-     
+
     }
 
 }
