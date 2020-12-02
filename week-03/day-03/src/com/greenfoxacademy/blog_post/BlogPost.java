@@ -1,4 +1,4 @@
-package com.greenfoxacademy.BlogPost;
+package com.greenfoxacademy.blog_post;
 
 public class BlogPost {
     String authorName;

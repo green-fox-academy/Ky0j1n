@@ -1,4 +1,4 @@
-package com.greenfoxacademy.PostIt;
+package com.greenfoxacademy.post_it;
 //Create a PostIt class that has
 //        a backgroundColor represented by a String
 //        a text on it

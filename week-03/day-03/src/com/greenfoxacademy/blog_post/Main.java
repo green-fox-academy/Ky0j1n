@@ -1,4 +1,4 @@
-package com.greenfoxacademy.BlogPost;
+package com.greenfoxacademy.blog_post;
 //Create a BlogPost class that has
 //        an authorName
 //        a title

@@ -1,4 +1,4 @@
-package com.greenfoxacademy.PostIt;
+package com.greenfoxacademy.post_it;
 
 public class PostIt {
     String background;
