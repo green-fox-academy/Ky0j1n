@@ -26,6 +26,6 @@ public class Main {
         post3.text = "Superb!";
         post3.textColor = "green";
 
-        
+
     }
 }
