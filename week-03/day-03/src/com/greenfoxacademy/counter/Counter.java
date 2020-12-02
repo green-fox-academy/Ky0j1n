@@ -27,19 +27,20 @@ public class Counter {
     }
 
 
-    public void add(int number){
+    public void add(int number) {
         counter += number;
 
     }
 
-    public void add(){
+    public void add() {
         counter++;
     }
 
-    public byte get(){
-       return (byte) counter;
+    public byte get() {
+        return (byte) counter;
     }
-    public void reset(){
+
+    public void reset() {
         counter = startingValue;
     }
 
