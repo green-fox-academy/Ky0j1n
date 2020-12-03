@@ -15,7 +15,7 @@ public class Dominoes {
         do {
 
             for (int i = 0; i < dominoes.size(); i++) {
-                
+
                 if (dominoes.get(i).getLeftSide() == dominoesInOrder.get(j).getRightSide()) {
                     dominoesInOrder.add(dominoes.get(i));
                     j++;
