@@ -19,7 +19,7 @@ public class Main {
         holder.add(midori);
 
             holder.removeTrash();
-            
+
         for(Sharpie sharpie: holder.sharpieSet){
             System.out.println(sharpie.getInfo());
         }

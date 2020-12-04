@@ -7,16 +7,14 @@ import java.util.Arrays;
 // - Print the elements of the reversed `numbers`
 public class practice {
     public static void main(String[] args) {
-     int[] numbers = {3, 4, 5, 6, 7};
-     int[] reversedNumbers = new int[numbers.length];
+        int[] numbers = {3, 4, 5, 6, 7};
 
-        for (int i = numbers.length-1; i >= 0 ; i++) {
-            int j=0;
-            reversedNumbers[j] = numbers[i];
-            j++;
-        }
-        System.out.println(Arrays.toString(reversedNumbers));
-        }
+        for (int i = numbers.length-1; i >= 0; i--)
+            System.out.print(numbers[i] + " ");
+
+
+
+    }
 
 }
 
