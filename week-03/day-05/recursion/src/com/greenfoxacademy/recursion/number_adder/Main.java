@@ -1,4 +1,4 @@
-package com.greenfoxacademy.recursion;
+package com.greenfoxacademy.recursion.number_adder;
 
 public class Main {
     public static void main(String[] args){
