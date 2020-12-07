@@ -1,4 +1,6 @@
-package com.greenfox.greenfox_organization;
+package com.greenfox.inheritance.green_fox_organization;
+
+import com.greenfox.inheritance.green_fox_organization.*;
 
 import java.util.ArrayList;
 

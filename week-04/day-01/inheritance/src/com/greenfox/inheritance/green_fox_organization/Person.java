@@ -1,4 +1,4 @@
-package com.greenfox.greenfox_organization;
+package com.greenfox.inheritance.green_fox_organization;
 
 //Create a Person class with the following fields:
 //

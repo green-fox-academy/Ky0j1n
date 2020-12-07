@@ -1,4 +1,4 @@
-package com.greenfox.greenfox_organization;
+package com.greenfox.inheritance.green_fox_organization;
 
 //Create a Student class that has the same fields and methods as the Person class, and has the following additional
 //
