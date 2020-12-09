@@ -5,16 +5,30 @@ public class Tree extends Plant {
 
     public Tree(String color) {
         super(color);
-        this.type = "tree";
     }
 
     @Override
     public void status() {
-        if (waterLvl < 10) {
+        if (waterLvl < underThatLvlINeedWater()) {
             System.out.println(genericStatus() + needsWater());
         } else {
             System.out.println(genericStatus() + noWater());
         }
+    }
+
+    @Override
+    public String getType() {
+        return "tree";
+    }
+
+    @Override
+    public double getAbsorbtionLvl() {
+        return 0.40;
+    }
+
+    @Override
+    public int underThatLvlINeedWater() {
+        return 10;
     }
 
 

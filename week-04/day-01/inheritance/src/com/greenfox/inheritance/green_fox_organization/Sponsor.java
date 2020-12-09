@@ -14,7 +14,7 @@ package com.greenfox.inheritance.green_fox_organization;
 //        Sponsor(): sets name to Jane Doe, age to 30, gender to female, company to Google and hiredStudents to 0
 
 public class Sponsor extends Person {
-    private String company;
+    private final String company;
     private int hiredStudents;
 
     public Sponsor(String name, int age, String gender, String company) {

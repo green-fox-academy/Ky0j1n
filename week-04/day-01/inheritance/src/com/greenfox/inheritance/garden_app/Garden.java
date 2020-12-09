@@ -20,15 +20,11 @@ public class Garden {
         }
     }
 
-    public int divider(int amountOfWater) {
+    public int divider() {
         int divide = 0;
+
         for (Plant plant : garden) {
-
-            if (plant.type.equals("flower") && plant.waterLvl < 5) {
-                divide++;
-
-            }
-            if (plant.type.equals("tree") && plant.waterLvl < 10) {
+            if (plant.isThirsty()) {
                 divide++;
             }
         }
@@ -37,12 +33,10 @@ public class Garden {
 
 
     public void watering(int amountOfWater) {
+        int divider = divider();
         for (Plant plant : garden) {
-            if (plant.type.equals("flower") && plant.waterLvl < 5) {
-                plant.waterLvl += ((amountOfWater / (divider(amountOfWater))) * 0.75);
-            }
-            if (plant.type.equals("tree") && plant.waterLvl < 10) {
-                plant.waterLvl += ((amountOfWater / (divider(amountOfWater))) * 0.40);
+            if (plant.isThirsty()) {
+                plant.waterLvl += ((amountOfWater / (divider)) * plant.getAbsorbtionLvl());
             }
         }
     }

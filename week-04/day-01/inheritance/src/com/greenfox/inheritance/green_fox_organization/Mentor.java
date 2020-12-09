@@ -12,7 +12,7 @@ package com.greenfox.inheritance.green_fox_organization;
 //        Mentor(): sets name to Jane Doe, age to 30, gender to female, level to intermediate
 
 public class Mentor extends Person {
-    private String level;
+    private final String level;
 
     public Mentor(String name, int age, String gender, String level) {
         super(name, age, gender);

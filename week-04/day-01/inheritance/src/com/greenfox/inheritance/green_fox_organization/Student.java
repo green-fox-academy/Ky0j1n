@@ -15,7 +15,7 @@ package com.greenfox.inheritance.green_fox_organization;
 //        Student(): sets name to Jane Doe, age to 30, gender to female, previousOrganization to The School of Life, skippedDays to 0
 
 public class Student extends Person {
-    private String previousOrganization;
+    private final String previousOrganization;
     private int skippedDays;
 
     public Student() {

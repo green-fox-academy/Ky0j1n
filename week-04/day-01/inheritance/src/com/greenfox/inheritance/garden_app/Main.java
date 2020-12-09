@@ -1,7 +1,5 @@
 package com.greenfox.inheritance.garden_app;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
         Flower flower1 = new Flower("yellow");
@@ -15,10 +13,10 @@ public class Main {
         garden.addTree(tree1);
         garden.addTree(tree2);
         garden.status();
-        System.out.println("");
+        System.out.println();
         garden.watering(40);
         garden.status();
-        System.out.println("");
+        System.out.println();
         garden.watering(70);
         garden.status();
     }

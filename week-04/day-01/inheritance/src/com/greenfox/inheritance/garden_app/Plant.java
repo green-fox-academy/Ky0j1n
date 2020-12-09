@@ -3,7 +3,7 @@ package com.greenfox.inheritance.garden_app;
 public abstract class Plant {
     String color;
     int waterLvl = 0;
-    String type;
+
 
     public Plant(String color) {
         this.color = color;
@@ -11,7 +11,7 @@ public abstract class Plant {
     }
 
     public String genericStatus() {
-        return "This " + color + " " + type;
+        return "This " + color + " " + getType();
     }
 
     public String needsWater() {
@@ -24,5 +24,16 @@ public abstract class Plant {
 
     public abstract void status();
 
+    public abstract String getType();
+
+    public abstract double getAbsorbtionLvl();
+
+    public boolean isThirsty() {
+
+        return this.waterLvl <= underThatLvlINeedWater();
+
+    }
+
+    public abstract int underThatLvlINeedWater();
 
 }

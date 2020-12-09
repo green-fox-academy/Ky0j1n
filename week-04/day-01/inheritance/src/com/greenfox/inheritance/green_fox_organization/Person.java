@@ -15,9 +15,9 @@ package com.greenfox.inheritance.green_fox_organization;
 //        Person(): sets name to Jane Doe, age to 30, gender to female
 
 public class Person {
-    private String name;
-    private int age;
-    private String gender;
+    private final String name;
+    private final int age;
+    private final String gender;
 
     public Person() {
         name = "Jane Doe";

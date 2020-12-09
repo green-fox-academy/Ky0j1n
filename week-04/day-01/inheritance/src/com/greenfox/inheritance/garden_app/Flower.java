@@ -4,16 +4,30 @@ public class Flower extends Plant {
 
     public Flower(String color) {
         super(color);
-        this.type = "flower";
     }
 
     @Override
     public void status() {
-        if (waterLvl < 5) {
+        if (waterLvl < underThatLvlINeedWater()) {
             System.out.println(genericStatus() + needsWater());
         } else {
             System.out.println(genericStatus() + noWater());
         }
+    }
+
+    @Override
+    public String getType() {
+        return "flower";
+    }
+
+    @Override
+    public double getAbsorbtionLvl() {
+        return 0.75;
+    }
+
+    @Override
+    public int underThatLvlINeedWater() {
+        return 5;
     }
 
 
