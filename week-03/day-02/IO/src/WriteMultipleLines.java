@@ -16,14 +16,17 @@ import java.util.List;
 // into the file and each line should read 'apple'
 // The function should not raise any errors if it could not write the file.
 public class WriteMultipleLines {
-    public static void addWords(Path path, String word, int howManyRows) throws IOException {
-        List<String> theWord = new ArrayList<String>();
-        for (int i = 0; i < howManyRows - 1; i++) {
+    public static void addWords(Path path, String word, int howManyTimes) {
+        List<String> theWord = new ArrayList<>();
+        for (int i = 1; i < howManyTimes ; i++) {
             theWord.add(word);
         }
         theWord.add(word);
+        try {
+            Files.write(path, theWord);
+        }catch (Exception e) {
+        }
 
-        Files.write(path, theWord);
     }
 
     public static void main(String[] args) {
@@ -31,10 +34,7 @@ public class WriteMultipleLines {
         Path filePath = Paths.get("apple.txt");
         String word = "apple";
         int number = 5;
-        try {
-            addWords(filePath, word, number);
-        } catch (IOException e) {
-            System.out.println("");
-        }
+        addWords(filePath, word, number);
+
     }
 }
