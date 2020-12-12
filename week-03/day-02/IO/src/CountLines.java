@@ -7,26 +7,26 @@
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CountLines {
     public static int lineCounter(String file) {
+        List<String> content = new ArrayList<>();
         int counter = 0;
-        try {
             Path filePath = Paths.get(file);
-            List<String> lines = Files.readAllLines(filePath);
-
-            for (int i = 0; i < lines.size(); i++) {
-                counter++;
-            }
+        try {
+          content = Files.readAllLines(filePath);
         } catch (Exception e) {
             System.out.println("0");
         }
-
+            for (int i = 0; i < content.size(); i++) {
+                counter++;
+            }
         return counter;
     }
 
     public static void main(String[] args) {
-        lineCounter("my-file.txt");
+        System.out.println(lineCounter("src/my-file"));
     }
 }
