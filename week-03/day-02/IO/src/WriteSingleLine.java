@@ -11,11 +11,11 @@ import java.util.List;
 // In case the program is unable to write the file,
 // It should print the following error message: "Unable to write file: my-file.txt"
 public class WriteSingleLine {
-    public static void addName(String addNaem) {
-        List<String> name = new ArrayList<String>();
-        name.add(addNaem);
-        try {
+    public static void addName(String addName) {
+        List<String> name = new ArrayList<>();
+            name.add(addName);
             Path filePath = Paths.get("my-file.txt");
+        try{
             Files.write(filePath, name);
         } catch (Exception e) {
             System.out.println("Unable to write file: my-file.txt");
@@ -25,7 +25,7 @@ public class WriteSingleLine {
 
     public static void main(String[] args) {
 
-        String naem = "Mate";
-        addName(naem);
+        String name = "Mate";
+        addName(name);
     }
 }
