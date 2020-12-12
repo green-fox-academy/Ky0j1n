@@ -4,6 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 // Write a function that copies the contents of a file into another
@@ -12,16 +13,15 @@ import java.util.List;
 public class CopyFile {
     public static boolean isCopied(String fileName, String whereToCopy) {
 
-        Path filePath = Paths.get(fileName);
 
         Path filePathDest = Paths.get(whereToCopy);
         try {
-            Files.copy(filePath, filePathDest);
+            List<String> content = Files.readAllLines(Paths.get(fileName));
+            Files.write(Paths.get(whereToCopy),content);
             return true;
         } catch (IOException e) {
             return false;
         }
-
 
     }
 
