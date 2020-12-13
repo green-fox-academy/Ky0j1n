@@ -15,12 +15,6 @@ public class Colors {
         String[][] colors = {{"lime", "forest green", "olive", "pale green", "spring green"},
                 {"orange red", "red", "tomato"},
                 {"orchid", "violer", "pink", "hot pink"}};
-        for (int i = 0; i < colors.length; i++) {
-
-            for (int j = 0; j < colors.length; j++) {
-                System.out.print(Arrays.deepToString(colors));
-            }
-            System.out.println();
-        }
+            System.out.println(Arrays.deepToString(colors));
     }
 }
