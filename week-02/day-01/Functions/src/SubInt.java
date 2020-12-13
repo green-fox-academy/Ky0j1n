@@ -17,26 +17,33 @@ import java.util.ArrayList;
 //        // array returned from subInt(). You could just as well iterate over array to print it.
 //    }
 //}
+
+
+
+
 public class SubInt {
-    public static Integer[] arrayIndex(int number, Integer[]array){
-        ArrayList<Integer>numbers= new ArrayList<Integer>();
+    public static Integer[] arrayIndex(int numberWhatWeLooking4, Integer[] array){
+        ArrayList<Integer>index= new ArrayList<Integer>();
 
         for (int i = 0; i< array.length; i++){
-            if(number == array[i]){
-                numbers.add(i);
-
-            };
-
+            if(String.valueOf(array[i]).contains(String.valueOf(numberWhatWeLooking4))) {
+                index.add(i);
+            }
         }
-        Integer[] result = new Integer[numbers.size()];
-        numbers.toArray(result);
+        Integer[] result = new Integer[index.size()];
+        index.toArray(result);
         return result;
     }
+//    Don't know how to print [] in case if index is empty
 
     public static void main(String[] args){
         Integer[] array= {1, 11, 34, 52, 61};
         int num = 1;
 
-        System.out.println(arrayIndex(1,array));
+           ;
+            for(int content :  arrayIndex(1,array)) {
+                System.out.print(content + ", ");
+            }
+
     }
 }
