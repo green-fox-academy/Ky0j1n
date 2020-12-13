@@ -6,14 +6,15 @@
 //     - Greeting is printing e.g. `Greetings dear, Green Fox`
 // - Greet `al`
 public class GreeterFunction {
-    public static String greet(String input) {
+    public void greet(String input) {
         String result = "";
         System.out.println("Greeting dear, " + input + "!");
-        return result;
+
     }
 
     public static void main(String[] args) {
+            GreeterFunction test = new GreeterFunction();
         String al = "Green Fox";
-        System.out.println(greet(al));
+        test.greet(al);
     }
 }
