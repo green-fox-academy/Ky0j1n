@@ -7,8 +7,8 @@ public class Summing {
 
     public static int sum(int input) {
         int result = 0;
-        for (int i = 0; i < input; i++) {
-            result += input;
+        for (int i = 0; i <= input; i++) {
+            result += i ;
 
         }
         return result;
