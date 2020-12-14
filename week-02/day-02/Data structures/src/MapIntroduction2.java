@@ -48,10 +48,11 @@ public class MapIntroduction2 {
         }
         papers.remove("The Lab");
 
-        papers.put(" 978-1-60309-450-4", "They Called Us Enemy");
-        papers.put(" 978-1-60309-453-5", "Why Did We Trust Him?");
+       papers.put("978-1-60309-450-4", "They Called Us Enemy");
+       papers.put("978-1-60309-453-5", "Why Did We Trust Him?");
+        System.out.println(papers.containsKey("478-0-61159-424-8"));
+        System.out.println(papers.get("978-1-60309-453-5"));
 
-        System.out.println((papers.containsKey("478-0-61159-424-8")));
 
     }
 }

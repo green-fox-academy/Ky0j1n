@@ -4,7 +4,7 @@
 public class TakesLonger {
     public static void main(String[] args) {
         String quote = "Hofstadter's Law: It you expect, even when you take into account Hofstadter's Law.";
-        String part1 = quote.substring(0, 20) + " always takes longer than";
+        String part1 = quote.substring(0, 20) + " always takes longer than ";
         String part2 = quote.substring(21);
 
         System.out.println(part1 + part2);
