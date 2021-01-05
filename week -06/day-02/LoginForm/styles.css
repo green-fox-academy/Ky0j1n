@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+   
+    margin: 0 40%;
+  }
+
+  .account-login-header {
+      padding-top : 40px;
+      padding-bottom: 40px;
+
+  }
+
+  label, .forgot {
+      display: block;
+      line-height: 32pt;
+  }
+
+  form {
+      position: relative;
+     
+  }
+
+  button {
+      margin-top: 50px;
+      padding: 10px 30px;
+      background-color: rgba(0, 0, 0, 0.705);
+      color: white;
+      border-radius: 40px;
+
+  }
+
+  .forgot {
+        font-size: 11px;
+        position: relative;
+        left: 94%;
+
+  }
+
+  input {
+      width: 120%;
+      font-size : 20pt;
+      outline-color: green;
+  }
+
+  header, label {
+      color: rgb(102, 101, 101);
+  }
