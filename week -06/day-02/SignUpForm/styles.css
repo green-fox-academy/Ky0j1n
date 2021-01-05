@@ -1,0 +1,64 @@
+body {
+    margin-left: 10%;
+}
+
+input {
+    display: block;
+    outline: 0;
+    width: 30%;
+    border-width: 0 0 3px;
+    border-color: grey;
+    height: 40px;
+}
+
+input:focus {
+    border-color: rgb(21, 212, 21)
+  }
+
+  span {
+      padding: 20px;
+      background: rgb(172, 170, 170);
+      border-radius: 50%;
+      position: relative;
+      left: 40%;
+      top: -80px;
+      box-shadow: 0px 3px rgb(207, 204, 204);
+      
+  }
+
+  .social-media button {
+      display: block;
+      position: relative;
+      left: 55%;
+      top: -160px;
+     margin-bottom: 25px;
+     font-size: 20px;
+     width: 20%;
+     height: 35px;
+  }
+
+  #fb {
+      background-color: blue;
+
+  }
+
+  #twitter {
+      background-color: lightskyblue;
+  }
+
+  #google {
+      background-color: red;
+  }
+
+  button {
+      color: white;
+      border: none;
+  }
+
+  footer button {
+      background-color: seagreen;
+      width: 10%;
+     height: 50px;
+     position: relative;
+     top: -130px;
+  }
