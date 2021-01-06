@@ -1,6 +1,6 @@
 package com.greenfoxacademy.springstart.Controller;
 
-import com.greenfoxacademy.springstart.Main;
+import com.greenfoxacademy.springstartB.Main;
 
 public class Greeting {
     Long greetCount;
