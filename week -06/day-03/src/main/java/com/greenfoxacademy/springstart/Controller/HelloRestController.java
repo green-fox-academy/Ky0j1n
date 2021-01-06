@@ -9,11 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloRestController {
 
+    AtomicLong atomicLong = new AtomicLong();
+
     @RequestMapping(value="/a")
     public Greeting greeting(@RequestParam String name) {
-
-        return new Greeting(name);
-
+            Long greetCounter = atomicLong.getGreetCount();
+        Greeting greeting =  new Greeting(greetCounter, name);
+        return  greeting;
     }
+
 
 }

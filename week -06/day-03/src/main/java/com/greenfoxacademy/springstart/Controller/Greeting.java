@@ -3,16 +3,14 @@ package com.greenfoxacademy.springstart.Controller;
 import com.greenfoxacademy.springstart.Main;
 
 public class Greeting {
-    long id = 1L;
+    Long greetCount;
     String content;
 
-    public Greeting(String name) {
-       this.content = "Hello " + name;
-    }
 
+    public Greeting(Long greetCount, String name) {
+        this.greetCount = greetCount;
+        this.content = "Hello " + name + "!";
 
-    public long getId() {
-        return id;
     }
 
 
@@ -20,9 +18,6 @@ public class Greeting {
         return content;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public void setContent(String content) {
         this.content = content;
