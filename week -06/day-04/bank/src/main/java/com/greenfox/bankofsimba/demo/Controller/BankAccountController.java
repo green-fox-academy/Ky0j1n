@@ -19,11 +19,11 @@ public class BankAccountController {
 
         public BankAccountController() {
 
-            bankAccountList.add(new BankAccount("Simba" ,2000D, "lion"));
-            bankAccountList.add(new BankAccount("Timon" ,5040D, "meerkat"));
-            bankAccountList.add(new BankAccount("Pumba" ,2300D, "boar"));
-            bankAccountList.add(new BankAccount("Scar" ,3567D, "lion"));
-            bankAccountList.add(new BankAccount("Nala" ,4000D, "lion"));
+            bankAccountList.add(new BankAccount("Simba" ,2000D, "lion",true));
+            bankAccountList.add(new BankAccount("Timon" ,5040D, "meerkat",false));
+            bankAccountList.add(new BankAccount("Pumba" ,2300D, "boar",false));
+            bankAccountList.add(new BankAccount("Scar" ,3567D, "lion",false));
+            bankAccountList.add(new BankAccount("Nala" ,4000D, "lion",false));
         }
 
 

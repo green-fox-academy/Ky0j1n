@@ -1,0 +1,6 @@
+.king {
+    background-color: gold;
+    color: azure;
+    font-size: 33pt;
+}
+table  tr:hover td{background-color:red;}
