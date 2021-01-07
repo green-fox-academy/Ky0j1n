@@ -1,4 +1,4 @@
-package com.greenfoxacademy.springstart;
+package com.greenfoxacademy.springstart.HelloWorld;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +10,7 @@ public class Main {
     @RequestMapping(value="/hello")
     @ResponseBody
     public String hello() {
-        return "Hello cASCasfadv";
+        return "Hello World!";
     }
+
 }
