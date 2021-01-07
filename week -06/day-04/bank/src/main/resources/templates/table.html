@@ -6,7 +6,8 @@
 </head>
 <body>
 <table>
-    <tr th:each="bankAccountList: ${bankAccountList}">
+    <tr th:each="bankAccountList, iter: ${bankAccountList}">
+        <td th:text="'Index of : '  + ${iter.index+1}"></td>
         <td th:text="${bankAccountList.name} + '\'s:' "></td>
         <td th:text="${bankAccountList.balance}"></td>
     </tr>

@@ -7,6 +7,7 @@ public class BankAccount {
     private Double balance;
     private String animalType;
 
+
     public BankAccount(String name, Double balance, String animalType) {
         this.name = name;
         this.balance = balance;

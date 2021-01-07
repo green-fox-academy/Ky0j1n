@@ -26,6 +26,8 @@ public class BankAccountController {
             bankAccountList.add(new BankAccount("Nala" ,4000D, "lion"));
         }
 
+
+
     @RequestMapping( path = "/show" , method = RequestMethod.GET)
     public String showAccount(Model model) {
        model.addAttribute("bankAccountList" , bankAccountList);
