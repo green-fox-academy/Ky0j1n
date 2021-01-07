@@ -1,21 +1,18 @@
 package com.greenfoxacademy.springstart.helloworldrestapp.controllers;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public class Greeting {
-    long id;
+    Long greetCount;
     String content;
 
-    public Greeting(long id, String content) {
-        this.id = id;
+
+
+    public Greeting(Long greetCount, String content) {
+        this.greetCount = greetCount;
         this.content = content;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getContent() {
         return content;
@@ -23,5 +20,13 @@ public class Greeting {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Long getGreetCount() {
+        return greetCount;
+    }
+
+    public void setGreetCount(Long greetCount) {
+        this.greetCount = greetCount;
     }
 }
