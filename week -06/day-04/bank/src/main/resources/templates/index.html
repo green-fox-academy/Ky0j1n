@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Accounts</title>
+</head>
+<body>
+    <div>
+        <div th:each="bankAccount : ${bankAccountList}">
+        <h1 th:text="${bankAccount.name} + ' - ' + ${bankAccount.balance} + ' /' + ${bankAccount.animalType} + '/'">
+        </h1>
+    </div>
+    </div>
+</body>
+</html>
