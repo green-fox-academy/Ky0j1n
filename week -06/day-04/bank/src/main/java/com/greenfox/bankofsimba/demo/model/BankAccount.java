@@ -22,7 +22,7 @@ public class BankAccount {
     }
 
     public String getBalance() {
-        return String.format("%.2f",balance);
+        return String.format("%.2f",balance) + " Zebra";
 
     }
 

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+</head>
+<body>
+<table>
+    <tr th:each="bankAccountList: ${bankAccountList}">
+        <td th:text="${bankAccountList.name} + '\'s:' "></td>
+        <td th:text="${bankAccountList.balance}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

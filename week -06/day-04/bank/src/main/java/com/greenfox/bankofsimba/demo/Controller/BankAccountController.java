@@ -20,6 +20,10 @@ public class BankAccountController {
         public BankAccountController() {
 
             bankAccountList.add(new BankAccount("Simba" ,2000D, "lion"));
+            bankAccountList.add(new BankAccount("Timon" ,5040D, "meerkat"));
+            bankAccountList.add(new BankAccount("Pumba" ,2300D, "boar"));
+            bankAccountList.add(new BankAccount("Scar" ,3567D, "lion"));
+            bankAccountList.add(new BankAccount("Nala" ,4000D, "lion"));
         }
 
     @RequestMapping( path = "/show" , method = RequestMethod.GET)
@@ -33,5 +37,11 @@ public class BankAccountController {
        String text= "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>";
        model.addAttribute("text", text);
        return "text";
+    }
+
+    @RequestMapping ( path = "/table", method = RequestMethod.GET)
+    public String tableShow(Model model) {
+              model.addAttribute("bankAccountList", bankAccountList);
+       return "table";
     }
 }
