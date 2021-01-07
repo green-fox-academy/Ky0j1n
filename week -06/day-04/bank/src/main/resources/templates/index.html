@@ -7,8 +7,11 @@
 <body>
     <div>
         <div th:each="bankAccount : ${bankAccountList}">
-        <h1 th:text="${bankAccount.name} + ' - ' + ${bankAccount.balance} + ' /' + ${bankAccount.animalType} + '/'">
-        </h1>
+            <h1 th:text="${bankAccount.name} + '&#8217s' + ' Account'" ></h1>
+            <span  th:text="'Your Account balance:  ' + ${bankAccount.balance} + ' Zebra'"></span>
+        </br>
+            <span  th:text="'Type:  ' + ${bankAccount.animalType}"></span>
+
     </div>
     </div>
 </body>

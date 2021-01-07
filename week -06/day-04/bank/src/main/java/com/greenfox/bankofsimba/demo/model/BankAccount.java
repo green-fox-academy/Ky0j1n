@@ -1,5 +1,7 @@
 package com.greenfox.bankofsimba.demo.model;
 
+import java.text.DecimalFormat;
+
 public class BankAccount {
     private String name;
     private Double balance;
@@ -19,8 +21,9 @@ public class BankAccount {
         this.name = name;
     }
 
-    public Double getBalance() {
-        return balance;
+    public String getBalance() {
+        return String.format("%.2f",balance);
+
     }
 
     public void setBalance(Double balance) {

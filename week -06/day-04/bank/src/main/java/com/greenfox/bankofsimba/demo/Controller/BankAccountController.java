@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,7 +17,8 @@ public class BankAccountController {
         private List<BankAccount> bankAccountList = new ArrayList<>();
 
         public BankAccountController() {
-            bankAccountList.add(new BankAccount("Simba" , 2000D, "lion"));
+
+            bankAccountList.add(new BankAccount("Simba" ,2000D, "lion"));
         }
 
     @RequestMapping( path = "/show" , method = RequestMethod.GET)
