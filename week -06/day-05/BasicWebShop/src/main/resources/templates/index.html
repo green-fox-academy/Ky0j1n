@@ -18,9 +18,12 @@
     <a href="/most-expensive-available" class="header-buttons">most expensive available</a>
 </div>
 <div ><p class="search">Search for:</p>
-    <input type="search" id="item-search" name="search-item" placeholder="...something like nike"
+    <form action="/search" method="post">
+    <input id="search" name="search" placeholder="...something like nike"
            aria-label="Search through site content">
-    <button id="search-button" >Search</button>
+    <button type="submit" id="search-button" >Search</button>
+    </form>
+
 </div>
 
 <table>
