@@ -28,12 +28,14 @@ public class WebshopController {
         shopItems.add(new ShopItem("T-shirt", "Blue with a corgi on a bike", 300.0, 1));
     }
 
+//   together
     @GetMapping("/webshop")
     public String landing(Model model) {
         model.addAttribute("itemsList", shopItems);
         return "index";
     }
 
+//    together
     @GetMapping("/only-available")
     public String onlyAvailable(Model model) {
         List<ShopItem> onlyAvailable = shopItems.stream()
@@ -43,6 +45,7 @@ public class WebshopController {
         return "index";
     }
 
+//    Gyuri
     @GetMapping("/cheapest-first")
     public String cheapestFirst(Model model) {
         List<ShopItem> cheapestFirst = shopItems.stream()
@@ -52,6 +55,7 @@ public class WebshopController {
         return "index";
     }
 
+//    Menya
     @GetMapping("/contains-nike")
     public String containsNike(Model model) {
         List<ShopItem> containsNike = shopItems
@@ -81,6 +85,7 @@ public class WebshopController {
 //        return "index";
 //    }
 
+//    Peter Varga
     @GetMapping("/most-expensive-available")
     public String mostExpensiveAvailable(Model model) {
         List<ShopItem> mostExpensiveItem = new ArrayList();
@@ -91,6 +96,7 @@ public class WebshopController {
         return "index";
     }
 
+//    Andris
     @GetMapping("/average-stock")
     public String averageStock(Model model) {
         Double averageStock = shopItems
@@ -102,25 +108,7 @@ public class WebshopController {
         return "average-stock";
     }
 
-//    @PostMapping("/search")
-//    public String search(Model model, @RequestParam String search) {
-//        List<ShopItem> searchResult = shopItems
-//                .stream()
-//                .filter(s -> s.getDescription()
-//                        .toLowerCase()
-//                        .contains(search))
-//                .collect(Collectors.toList());
-//
-//            List<ShopItem> namesFound = shopItems.stream()
-//                    .filter(name -> name.getName()
-//                    .toLowerCase()
-//                    .contains(search))
-//                    .collect(Collectors.toList());
-//        model.addAttribute("itemsList", namesFound);
-//
-//        return "index";
-//    }
-
+//    Peter Varga
     @PostMapping("/search")
     public String searchBar(Model model, @RequestParam String search) {
         List<ShopItem> listOfSearchedItems = shopItems
