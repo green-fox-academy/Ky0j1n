@@ -10,18 +10,27 @@
     <a href="/webshop"><h1>My Shop</h1></a>
     <hr>
 </header>
-<div id ="head-container">
-    <a href="/only-available" class="header-buttons" >only available</a>
+<div id="head-container">
+    <a href="/only-available" class="header-buttons">only available</a>
     <a href="/cheapest-first" class="header-buttons">cheapest first</a>
     <a href="/contains-nike" class="header-buttons">contains nike</a>
     <a href="average-stock" class="header-buttons">average stock</a>
     <a href="/most-expensive-available" class="header-buttons">most expensive available</a>
 </div>
-<div ><p class="search">Search for:</p>
+<div class="dropdown">
+    <button class="type">Type</button>
+    <div class="dropdown-content">
+        <a href="/clothes-and-shoes">Clothes and Shoes</a>
+        <a href="/electronics">Electronics</a>
+        <a href="/beverages-and-snacks">Beverages and Snacks </a>
+    </div>
+</div>
+
+<div><p class="search">Search for:</p>
     <form action="/search" method="post">
-    <input id="search" name="search" placeholder="...something like nike"
-           aria-label="Search through site content">
-    <button type="submit" id="search-button" >Search</button>
+        <input id="search" name="search" placeholder="...something like nike"
+               aria-label="Search through site content">
+        <button type="submit" id="search-button">Search</button>
     </form>
 
 </div>
@@ -29,19 +38,20 @@
 <table>
     <tr>
         <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
         <th>Price</th>
         <th>Quantity of stock</th>
     </tr>
     <tr th:each="items: ${itemsList}">
         <td th:text="${items.name}"/>
+        <td th:text="${items.type}"/>
         <td th:text="${items.description}"/>
-        <td class ="centered" th:text="${items.price}"/>
-        <td class ="centered" th:text="${items.quantityOfStock}"/>
+        <td class="centered" th:text="${items.price}"/>
+        <td class="centered" th:text="${items.quantityOfStock}"/>
     </tr>
 </table>
-    <div><p th:text="${noItemMessage}"></p></div>
-
+<div><p th:text="${noItemMessage}"></p></div>
 
 
 </body>

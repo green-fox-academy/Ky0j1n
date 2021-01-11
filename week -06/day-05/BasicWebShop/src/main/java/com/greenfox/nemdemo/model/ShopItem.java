@@ -5,12 +5,14 @@ public class ShopItem {
     String description;
     Double price;
     Integer quantityOfStock;
+    String type;
 
-    public ShopItem(String name, String description, Double price, Integer quantityOfStock) {
+    public ShopItem(String name, String description, Double price, Integer quantityOfStock, String type) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.quantityOfStock = quantityOfStock;
+        this.type = type;
     }
 
 
@@ -44,5 +46,13 @@ public class ShopItem {
 
     public void setQuantityOfStock(Integer quantityOfStock) {
         this.quantityOfStock = quantityOfStock;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
