@@ -1,6 +1,7 @@
 package com.greenfox.nemdemo.controller;
 
 import com.greenfox.nemdemo.model.ShopItem;
+import org.springframework.cglib.core.CollectionUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Controller
 public class WebshopController {
@@ -100,16 +102,40 @@ public class WebshopController {
         return "average-stock";
     }
 
-    @PostMapping("/search")
-    public String search(Model model, @RequestParam String search) {
-        List<ShopItem> searchResult = shopItems
-                .stream()
-                .filter(s -> s.getDescription()
-                        .toLowerCase()
-                        .contains(search))
-                .collect(Collectors.toList());
-        model.addAttribute("itemsList", searchResult);
+//    @PostMapping("/search")
+//    public String search(Model model, @RequestParam String search) {
+//        List<ShopItem> searchResult = shopItems
+//                .stream()
+//                .filter(s -> s.getDescription()
+//                        .toLowerCase()
+//                        .contains(search))
+//                .collect(Collectors.toList());
+//
+//            List<ShopItem> namesFound = shopItems.stream()
+//                    .filter(name -> name.getName()
+//                    .toLowerCase()
+//                    .contains(search))
+//                    .collect(Collectors.toList());
+//        model.addAttribute("itemsList", namesFound);
+//
+//        return "index";
+//    }
 
+    @PostMapping("/search")
+    public String searchBar(Model model, @RequestParam String search) {
+        List<ShopItem> listOfSearchedItems = shopItems
+                .stream()
+                .filter(s -> (s.getDescription() + s.getName())
+                        .toLowerCase()
+                        .contains(search.toLowerCase()))
+                .collect(Collectors.toList());
+        model.addAttribute("itemsList", listOfSearchedItems);
+        if (listOfSearchedItems.isEmpty()) {
+            model.addAttribute("noItemMessage", "No item found");
+        } else {
+            model.addAttribute("noItemMessage", "");
+        }
         return "index";
+
     }
 }
