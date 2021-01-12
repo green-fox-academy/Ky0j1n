@@ -11,7 +11,13 @@ mysql> SELECT title FROM movie
 2 rows in set (0.00 sec)
 
 
+
+
+
 Exercise 2:
+
+
+
 
 mysql> SELECT distinct year FROM movie INNER JOIN Rating ON movie.mID = rating.mID WHERE stars >= 4 ORDER BY year ASC ;
 +------+
@@ -24,7 +30,13 @@ mysql> SELECT distinct year FROM movie INNER JOIN Rating ON movie.mID = rating.m
 +------+
 4 rows in set (0.00 sec)
 
+
+
+
 Exercise 3
+
+
+
 
 mysql> SELECT title FROM movie LEFT JOIN Rating ON movie.mID = rating.mID
     -> WHERE rID IS NULL;
@@ -34,4 +46,20 @@ mysql> SELECT title FROM movie LEFT JOIN Rating ON movie.mID = rating.mID
 | Star Wars |
 | Titanic   |
 +-----------+
+2 rows in set (0.00 sec)
+
+
+
+Exercise 4 
+
+
+
+mysql> SELECT name FROM rating RIGHT JOIN Reviewer ON rating.rID = reviewer.rID
+    -> WHERE ratingDate IS NULL;
++---------------+
+| name          |
++---------------+
+| Daniel Lewis  |
+| Chris Jackson |
++---------------+
 2 rows in set (0.00 sec)
