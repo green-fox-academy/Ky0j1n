@@ -14,7 +14,7 @@
     <a href="/only-available" class="header-buttons">only available</a>
     <a href="/cheapest-first" class="header-buttons">cheapest first</a>
     <a href="/contains-nike" class="header-buttons">contains nike</a>
-    <a href="average-stock" class="header-buttons">average stock</a>
+    <a href="/average-stock" class="header-buttons">average stock</a>
     <a href="/most-expensive-available" class="header-buttons">most expensive available</a>
 </div>
 <div class="dropdown">
@@ -25,7 +25,7 @@
         <a href="/beverages-and-snacks">Beverages and Snacks </a>
     </div>
 </div>
-
+<a href="/currency-change" class="header-buttons">Switch Currency</a>
 <div><p class="search">Search for:</p>
     <form action="/search" method="post">
         <input id="search" name="search" placeholder="...something like nike"
@@ -47,7 +47,7 @@
         <td th:text="${items.name}"/>
         <td th:text="${items.type}"/>
         <td th:text="${items.description}"/>
-        <td class="centered" th:text="${items.price}"/>
+        <td class="centered" th:text="${items.price} + ${items.currency}"/>
         <td class="centered" th:text="${items.quantityOfStock}"/>
     </tr>
 </table>

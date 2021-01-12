@@ -6,13 +6,15 @@ public class ShopItem {
     Double price;
     Integer quantityOfStock;
     String type;
+    String currency;
 
-    public ShopItem(String name, String description, Double price, Integer quantityOfStock, String type) {
+    public ShopItem(String name, String description, Double price, Integer quantityOfStock, String type, String currency) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.quantityOfStock = quantityOfStock;
         this.type = type;
+        this.currency = currency;
     }
 
 
@@ -54,5 +56,28 @@ public class ShopItem {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public void change(ShopItem item) {
+        if(item.getCurrency().equals("HUF")) {
+            Double neoPrice = item.getPrice() / 361;
+            item.setPrice(neoPrice);
+            item.setCurrency("EUR");
+
+        } else if (item.getCurrency().equals("EUR"))
+        {
+            Double neoPrice = item.getPrice() * 361;
+            item.setPrice(neoPrice);
+            item.setCurrency("HUF");
+        }
     }
 }

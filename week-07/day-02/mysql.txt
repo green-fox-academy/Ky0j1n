@@ -1,0 +1,15 @@
+Exercise 1:
+
+mysql> SELECT title FROM movie
+    -> WHERE director = "Steven Spielberg";
++-------------------------+
+| title                   |
++-------------------------+
+| E.T.                    |
+| Raiders of the Lost Ark |
++-------------------------+
+2 rows in set (0.00 sec)
+
+
+Exercise 2:
+
