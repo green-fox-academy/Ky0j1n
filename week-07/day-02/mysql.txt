@@ -23,3 +23,15 @@ mysql> SELECT distinct year FROM movie INNER JOIN Rating ON movie.mID = rating.m
 | 2009 |
 +------+
 4 rows in set (0.00 sec)
+
+Exercise 3
+
+mysql> SELECT * FROM movie LEFT JOIN Rating ON movie.mID = rating.mID
+    -> WHERE rID IS NULL;
++------+-----------+------+---------------+------+------+-------+------------+
+| mID  | title     | year | director      | rID  | mID  | stars | ratingDATE |
++------+-----------+------+---------------+------+------+-------+------------+
+|  102 | Star Wars | 1977 | George Lucas  | NULL | NULL |  NULL | NULL       |
+|  105 | Titanic   | 1997 | James Cameron | NULL | NULL |  NULL | NULL       |
++------+-----------+------+---------------+------+------+-------+------------+
+2 rows in set (0.00 sec)
