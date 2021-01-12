@@ -13,3 +13,13 @@ mysql> SELECT title FROM movie
 
 Exercise 2:
 
+mysql> SELECT distinct year FROM movie INNER JOIN Rating ON movie.mID = rating.mID WHERE stars >= 4 ORDER BY year ASC ;
++------+
+| year |
++------+
+| 1937 |
+| 1939 |
+| 1981 |
+| 2009 |
++------+
+4 rows in set (0.00 sec)
