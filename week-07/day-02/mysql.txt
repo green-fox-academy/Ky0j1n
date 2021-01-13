@@ -95,3 +95,22 @@ mysql> SELECT name, title, stars, ratingdate FROM movie INNER JOIN Rating ON  mo
 | Sarah Martinez   | Gone with the Wind      |     4 | 2011-01-27 |
 +------------------+-------------------------+-------+------------+
 14 rows in set (0.00 sec)
+
+
+Exercise 6 (MAde by Bálint)
+
+
+
+
+SELECT re.name, m.title FROM Reviewer re INNER JOIN Rating r ON re.rID =r.rID
+    -> INNER JOIN Rating r2 ON r2.rID = re.rID
+    -> INNER JOIN Movie m ON m.mID = r.mID
+    -> WHERE r.mID = r2.mID AND r.ratingDate < r2.ratingDate AND r.stars < r2.stars;
++----------------+--------------------+
+| name           | title              |
++----------------+--------------------+
+| Sarah Martinez | Gone with the Wind |
++----------------+--------------------+
+1 row in set (0.00 sec)
+
+
