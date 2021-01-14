@@ -114,3 +114,25 @@ SELECT re.name, m.title FROM Reviewer re INNER JOIN Rating r ON re.rID =r.rID
 1 row in set (0.00 sec)
 
 
+
+Exercise 7
+
+
+
+mysql> SELECT title, MAX(stars) FROM movie
+    -> INNER JOIN rating r ON movie.mid = r.mid
+    -> GROUP BY title
+    -> ORDER BY title;
++-------------------------+------------+
+| title                   | MAX(stars) |
++-------------------------+------------+
+| Avatar                  |          5 |
+| E.T.                    |          3 |
+| Gone with the Wind      |          4 |
+| Raiders of the Lost Ark |          4 |
+| Snow White              |          5 |
+| The Sound of Music      |          3 |
++-------------------------+------------+
+6 rows in set (0.00 sec)
+
+
