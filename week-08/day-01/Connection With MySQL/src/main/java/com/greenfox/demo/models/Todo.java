@@ -25,4 +25,10 @@ public class Todo {
     public Todo(String title) {
         this.title = title;
     }
+
+    public Todo(String title, Boolean done, Boolean urgent) {
+        this.title = title;
+        this.done = done;
+        this.urgent = urgent;
+    }
 }
