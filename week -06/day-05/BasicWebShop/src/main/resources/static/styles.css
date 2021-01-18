@@ -48,7 +48,8 @@ a:hover {
 
 /*position the "search for:" */
 .search {
-    color:orangered;
+    color:white;
+    font-size: 33px;
     /*set it to relative will allow u to move it from the original position (left, right, top, bottom, + , - */
     position: relative;
     top: 16px;
@@ -111,6 +112,10 @@ td {
 
 .dropdown {
     position: relative;
+    left: 10px;
+
+    top: 30px;
+
 
 }
 
@@ -119,7 +124,7 @@ td {
     position: absolute;
     background-color: red;
     min-width: 160px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .dropdown-content a {

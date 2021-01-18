@@ -1,0 +1,19 @@
+body {
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+
+#themes {
+    display: flex;
+    justify-content: space-around;
+}
+
+#themes button{
+    font-size: 50px;
+}

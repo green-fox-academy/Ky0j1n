@@ -1,0 +1,23 @@
+body {
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-right: 10%;
+    background-color: sandybrown;
+}
+
+h2 {
+    font-weight: bold;
+    color: saddlebrown;
+}
+p {
+    color: saddlebrown;
+}
+#themes {
+    display: flex;
+    justify-content: space-around;
+}
+
+#themes button{
+    font-size: 50px;
+}
+

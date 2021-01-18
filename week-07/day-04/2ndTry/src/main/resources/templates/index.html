@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Information</title>
+    <link id="default" rel="stylesheet" type="text/css" href="styles.css">
+
+    <script type="text/javascript">
+        function swapStyle(style) {
+           document.getElementById('default').setAttribute('href', style);
+
+        }
+    </script>
+
+</head>
+<body>
+<div id="themes">
+<button onclick="swapStyle('styles.css')">
+    default
+</button>
+    <button onclick="swapStyle('pps.css')">
+        Pirate Penis Size
+    </button>
+<button onclick="swapStyle('tuff.css')">
+    Tuff(iffee)
+</button>
+
+</div>
+
+<nav>
+    <ul>
+        <li><a href="/index">Information</a></li>
+    </ul>
+</nav>
+
+<main>
+    <img src="greenfox.png" alt="Green Fox Logo">
+    <p th:text="'This is ' +${foxData.name} + '.' + ' Currently living on ' + ${foxData.food} + ' and ' +${foxData.drink} + '. He knows ' + ${foxData.tricks.size()} + ' tricks.'"></p>
+
+    <h2>Known tricks</h2>
+
+    <ul>
+        <li>write HTML</li>
+        <li>code in Java</li>
+    </ul>
+</main>
+
+</body>
+</html>
