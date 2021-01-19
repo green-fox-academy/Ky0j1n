@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Controller
@@ -57,5 +58,29 @@ public class TodoController {
             todoRepository.deleteById(id);
         return "redirect:/todo/list";
     }
+
+    @GetMapping("/{id}/edit")
+    public String getTodoById(Model model,@PathVariable Long id){
+
+       Optional<Todo> todoObject = todoRepository.findById(id);
+
+       if(todoObject.isPresent()) {
+           Todo todo = todoObject.get();
+           model.addAttribute("todo",todo);
+       }else {
+           model.addAttribute("error","Unable to locate todo with this id");
+       }
+        return "edit";
+    }
+
+    @PostMapping("/{id}/edit")
+    public String editTodoById(@ModelAttribute Todo todo, @PathVariable Long id) {
+        todoRepository.findById(id);
+        todoRepository.save(todo);
+
+        return "redirect:/todo/list";
+    }
+
+
 
 }
