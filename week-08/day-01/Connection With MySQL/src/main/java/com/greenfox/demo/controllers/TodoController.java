@@ -19,6 +19,7 @@ public class TodoController {
 
     private TodoRepository todoRepository;
 
+
     @Autowired
     public TodoController(TodoRepository todoRepository) {
         this.todoRepository = todoRepository;
@@ -74,8 +75,8 @@ public class TodoController {
     }
 
     @PostMapping("/{id}/edit")
-    public String editTodoById(@ModelAttribute Todo todo, @PathVariable Long id) {
-        todoRepository.findById(id);
+    public String editTodoById(@ModelAttribute Todo todo) {
+
         todoRepository.save(todo);
 
         return "redirect:/todo/list";

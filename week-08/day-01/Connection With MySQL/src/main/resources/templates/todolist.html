@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
-    <link rel="stylesheet" href="f.css">
+    <link rel="stylesheet" th:href="@{/f.css}">
     <meta charset="UTF-8">
 
     <title>Todo</title>
@@ -25,6 +25,25 @@
             <td><a th:href="'/todo/'+ ${todo.id} +'/edit'">Edit</a></td>
         </tr>
     </table>
+
+    <table style="width:100%">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
 </main>
 </body>
 </html>

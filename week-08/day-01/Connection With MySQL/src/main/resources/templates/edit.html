@@ -10,6 +10,7 @@
 <body>
 <p th:if="${error}" th:text="${error}"></p>
 <div th:unless="${error}">
+
     <form th:action="'/todo/' +${id}+'/edit'" method="post">
         <label for="title">Todo Description</label>
         <input type="text" id="title" name="title" th:value="${todo.title}">
