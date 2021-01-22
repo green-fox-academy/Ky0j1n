@@ -5,6 +5,7 @@ import com.greenfox.fakereddit.repositrorys.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,8 +18,12 @@ public class PostService {
         this.postRepository = postRepository;
     }
 
-    public List<Post> getAllPostSortedByRating(){
-           return  postRepository.allPostByRating();
+    public List<Post> getAllPostSortedByRating(Integer pageNumber){
+
+
+            Integer asd = (10 * pageNumber) - 10;
+            return postRepository.allPostByRating(asd);
+
     }
 
     public void addNewPost(String title, String content) {
@@ -52,4 +57,19 @@ public class PostService {
         post.setRating(rating);
     }
 
+    public List<Integer> getPagesNumbers() {
+        List<Post> allPost = (List<Post>) postRepository.findAll();
+        List<Integer> pagesNumbers = new ArrayList<>();
+
+        Integer pageCounter = 0;
+        for (int i = 0; i <allPost.size(); i++) {
+           if(i % 10 == 0) {
+
+               pageCounter++;
+               pagesNumbers.add(pageCounter);
+
+           }
+        }
+        return pagesNumbers;
+    }
 }

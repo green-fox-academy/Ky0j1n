@@ -23,11 +23,20 @@
             <td>
                 <a th:href="@{'/fake-reddit/change-rating/' + ${post.id} + '/-'}">-</a>
             </td>
+
             <td>
                 <a th:href="@{/fake-reddit(postid=${post.id})}" th:text="${post.content}"></a>
             </td>
+            <td th:text="${post.getPostDateAndTime()}">
+            </td>
         </tr>
     </table>
+
+    <span th:each="pageNumber: ${pagesList}">
+<a th:text="${pageNumber}" th:href="@{/fake-reddit/(page=${pageNumber})}"></a>
+
+</span>
+
 </main>
 </body>
 </html>
