@@ -7,6 +7,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Error{
+public class DoublingError {
     String error = "Please provide an input!";
 }
