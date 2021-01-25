@@ -42,17 +42,8 @@ public class MainController {
         try {
             return new ResponseEntity<Greeter>(greeterService.greet(name, title), HttpStatus.OK);
         } catch (Exception e) {
-            if (name == null && title == null) {
-                return new ResponseEntity<GreeterError>(new GreeterError().emptyNameTitle(), HttpStatus.BAD_REQUEST);
-            }
-            if (name == null && title != null) {
-                return new ResponseEntity<GreeterError>(new GreeterError().noName(), HttpStatus.BAD_REQUEST);
-            }
-            if (name != null && title == null) {
-                return new ResponseEntity<GreeterError>(new GreeterError().noTitle(), HttpStatus.BAD_REQUEST);
-            }
+                return new ResponseEntity<GreeterError>(new GreeterError(name,title), HttpStatus.BAD_REQUEST);
         }
-        return null;
     }
 }
 

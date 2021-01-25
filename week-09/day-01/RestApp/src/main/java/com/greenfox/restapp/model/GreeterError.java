@@ -10,21 +10,14 @@ import lombok.Setter;
 public class GreeterError {
     String error;
 
-    public GreeterError(String error){
-        this.error = error;
-    }
-    public GreeterError emptyNameTitle(){
-        GreeterError emptyNameTitle = new GreeterError("Please provide a name and a title!");
-        return emptyNameTitle;
-    }
-
-    public GreeterError noTitle(){
-        GreeterError noTitle = new GreeterError("Please provide a title!");
-        return noTitle;
+    public GreeterError(String name, String title){
+        if(name == null && title == null){
+            this.error = "Please provide a name and a title!" ;
+        }else if (name == null){
+            this.error = "Please provide a name!";
+        }else{
+            this.error = "Please provide a title!";
+        }
     }
 
-    public GreeterError noName(){
-        GreeterError noName = new GreeterError("Please provide a name!");
-        return noName;
-    }
 }
