@@ -1,17 +1,18 @@
 package com.greenfox.restapp.controller;
 
 
+import com.greenfox.restapp.error.DoUntilError;
+import com.greenfox.restapp.error.DoublingError;
+import com.greenfox.restapp.error.GreeterError;
 import com.greenfox.restapp.model.*;
 import com.greenfox.restapp.service.AppendService;
+import com.greenfox.restapp.service.DoUntilService;
 import com.greenfox.restapp.service.DoublingService;
 import com.greenfox.restapp.service.GreeterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -20,12 +21,14 @@ public class MainController {
     DoublingService doublingService;
     GreeterService greeterService;
     AppendService appendService;
-
+    DoUntilService doUntilService;
     @Autowired
-    public MainController(DoublingService doublingService, GreeterService greeterService, AppendService appendService) {
+    public MainController(DoublingService doublingService, GreeterService greeterService, AppendService appendService,DoUntilService doUntilService) {
         this.doublingService = doublingService;
         this.greeterService = greeterService;
         this.appendService = appendService;
+        this.doUntilService = doUntilService;
+
     }
 
 
@@ -55,5 +58,16 @@ public class MainController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+    @PostMapping("/dountil/{action}")
+    public ResponseEntity<?> doUntil(@PathVariable String action, @RequestBody (required = false) asd until) {
+        try{
+            return new ResponseEntity<>(doUntilService.action(action, until.getUntil()), HttpStatus.OK);
+        }catch (Exception e) {
+            return new ResponseEntity<>(new DoUntilError(),HttpStatus.OK);
+        }
+
+    }
+
 }
 

@@ -13,4 +13,5 @@ public class DoublingService {
      return new Doubling(input);
  }
 
+
 }

@@ -1,4 +1,4 @@
-package com.greenfox.restapp.model;
+package com.greenfox.restapp.error;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
