@@ -5,6 +5,7 @@ import com.greenfox.restapp.error.DoUntilError;
 import com.greenfox.restapp.error.DoublingError;
 import com.greenfox.restapp.error.GreeterError;
 import com.greenfox.restapp.model.*;
+import com.greenfox.restapp.model.Number;
 import com.greenfox.restapp.service.AppendService;
 import com.greenfox.restapp.service.DoUntilService;
 import com.greenfox.restapp.service.DoublingService;
@@ -60,7 +61,7 @@ public class MainController {
     }
 
     @PostMapping("/dountil/{action}")
-    public ResponseEntity<?> doUntil(@PathVariable String action, @RequestBody (required = false) asd until) {
+    public ResponseEntity<?> doUntil(@PathVariable String action, @RequestBody (required = false) Number until) {
         try{
             return new ResponseEntity<>(doUntilService.action(action, until.getUntil()), HttpStatus.OK);
         }catch (Exception e) {

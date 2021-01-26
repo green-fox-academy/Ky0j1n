@@ -8,10 +8,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class asd {
+public class Number {
     Integer until;
 
-    public asd(Integer until) {
+    public Number(Integer until) {
         this.until = until;
     }
 }
