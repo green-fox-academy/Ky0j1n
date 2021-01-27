@@ -8,8 +8,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Groot {
-    String received;
-    String translated = "I am Groot!";
+   private String received;
+   private String translated = "I am Groot!";
 
     public Groot (String message) {
         this.received = message;

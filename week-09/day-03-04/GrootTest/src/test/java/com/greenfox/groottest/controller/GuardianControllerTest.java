@@ -14,6 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.is;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -44,7 +45,7 @@ public class GuardianControllerTest {
     @Test
     public void getTranslatedWithoutParameter() throws Exception {
         GrootError grootError = new GrootError();
-        when(grootService.getTranslation("")).thenThrow(new NoInputException());
+        when(grootService.getTranslation(any())).thenThrow(NoInputException.class);
         mockMvc.perform(get("/groot"))
                 .andExpect(status().isBadRequest())
                 .andDo(print());
