@@ -3,8 +3,11 @@ package com.greenfox.groottest.controllers;
 
 import com.greenfox.groottest.error.GrootError;
 import com.greenfox.groottest.error.NoInputException;
+import com.greenfox.groottest.models.Cargo;
 import com.greenfox.groottest.models.Groot;
+import com.greenfox.groottest.models.RecivedAmmoAndShipStatus;
 import com.greenfox.groottest.services.GrootService;
+import com.greenfox.groottest.services.RocketService;
 import com.greenfox.groottest.services.YonduService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,6 +23,8 @@ public class GuardianController {
     GrootService grootService;
     @Autowired
     YonduService yonduService;
+    @Autowired
+    RocketService rocketService;
 
     @GetMapping("/groot")
     public ResponseEntity<?> grootTranslator(@RequestParam (required = false) String message) {
@@ -44,6 +49,21 @@ public class GuardianController {
         }catch (NoInputException e) {
             return new ResponseEntity<>(new GrootError(), HttpStatus.BAD_REQUEST);
         }
+    }
+
+    @GetMapping("/rocket")
+    public Cargo getCargoOfTHeShip() {
+         return rocketService.getCargoOfTheShip();
+    }
+
+    @GetMapping("/rocket/fill")
+    public ResponseEntity<?> fillAmmo(@RequestParam (required = false) String caliber, Double amount) {
+        try {
+            return new ResponseEntity<>(rocketService.fillAmmo(caliber,amount) , HttpStatus.OK) ;
+        } catch (NoInputException e) {
+            return new ResponseEntity<>(new GrootError(), HttpStatus.BAD_REQUEST);
+        }
+
     }
 
 }

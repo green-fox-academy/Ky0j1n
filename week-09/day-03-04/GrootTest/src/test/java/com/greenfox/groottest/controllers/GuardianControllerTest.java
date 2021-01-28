@@ -1,13 +1,15 @@
-package com.greenfox.groottest.controller;
+package com.greenfox.groottest.controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.greenfox.groottest.controllers.GuardianController;
-import com.greenfox.groottest.error.GrootError;
+
 import com.greenfox.groottest.error.NoInputException;
 import com.greenfox.groottest.models.Arrow;
+import com.greenfox.groottest.models.Cargo;
 import com.greenfox.groottest.models.Groot;
 import com.greenfox.groottest.services.GrootService;
+import com.greenfox.groottest.services.RocketService;
 import com.greenfox.groottest.services.YonduService;
+import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,9 +34,18 @@ public class GuardianControllerTest {
     private GrootService grootService;
     @MockBean
     private YonduService yonduService;
+    @MockBean
+    private RocketService rocketService;
 
     @Autowired
     private MockMvc mockMvc;
+
+   private Cargo cargo;
+
+    @BeforeEach
+    public void setup(){
+        cargo = new Cargo();
+    }
 
     @Test
     public void getTranslated() throws Exception {
@@ -49,7 +60,6 @@ public class GuardianControllerTest {
 
     @Test
     public void getTranslatedWithoutParameter() throws Exception {
-        GrootError grootError = new GrootError();
         when(grootService.getTranslation(any())).thenThrow(NoInputException.class);
         mockMvc.perform(get("/groot"))
                 .andExpect(status().isBadRequest())
@@ -85,5 +95,70 @@ public class GuardianControllerTest {
                 .andDo(print());
     }
 
+
+
+    @Test
+    public void getCargoStatus() throws Exception {
+        when(rocketService.getCargoOfTheShip()).thenReturn(cargo);
+        mockMvc.perform(get("/rocket"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("caliber25", is(0.0)))
+                .andExpect(jsonPath("caliber30", is(0.0)))
+                .andExpect(jsonPath("caliber50", is(0.0)))
+                .andExpect(jsonPath("shipstatus", is("empty")))
+                .andExpect(jsonPath("ready", is(false)))
+                .andDo(print());
+    }
+
+    @Test
+    public void fillSomeThing() throws Exception {
+        cargo.setCaliber50(20.0);
+        when(rocketService.getCargoOfTheShip()).thenReturn(cargo);
+        mockMvc.perform((get("/rocket")))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("caliber25", is(0.0)))
+                .andExpect(jsonPath("caliber30", is(0.0)))
+                .andExpect(jsonPath("caliber50", is(20.0)))
+                .andExpect(jsonPath("shipstatus", is("empty")))
+                .andExpect(jsonPath("ready", is(false)))
+                .andDo(print());
+
+    }
+
+    @Test
+    public void empty() throws Exception {
+
+        when(rocketService.getCargoOfTheShip()).thenReturn(cargo);
+        mockMvc.perform((get("/rocket")))
+                .andExpect(jsonPath("shipstatus", is("empty")))
+                .andDo(print());
+    }
+
+    @Test
+    public void fortyPercentStatusCheck() throws Exception {
+        cargo.setShipStatus("40%");
+        when(rocketService.getCargoOfTheShip()).thenReturn(cargo);
+        mockMvc.perform((get("/rocket")))
+                .andExpect(jsonPath("shipstatus", is("40%")))
+                .andDo(print());
+    }
+    @Test
+    public void fullStatusCheck() throws Exception {
+        cargo.setShipStatus("full");
+        cargo.isShipReady();
+        when(rocketService.getCargoOfTheShip()).thenReturn(cargo);
+        mockMvc.perform((get("/rocket")))
+                .andExpect(jsonPath("ready", is(true)))
+                .andDo(print());
+    }
+
+    @Test
+    public void emptyFill() throws Exception {
+        when(rocketService.fillAmmo(null,null)).thenThrow(new NoInputException());
+        mockMvc.perform((get("/rocket/fill")))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("error", is("I am Groot!")))
+                .andDo(print());
+    }
 
 }
