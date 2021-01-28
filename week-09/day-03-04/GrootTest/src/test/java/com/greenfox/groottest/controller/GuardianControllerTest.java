@@ -1,10 +1,13 @@
 package com.greenfox.groottest.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.greenfox.groottest.controllers.GuardianController;
 import com.greenfox.groottest.error.GrootError;
 import com.greenfox.groottest.error.NoInputException;
+import com.greenfox.groottest.models.Arrow;
 import com.greenfox.groottest.models.Groot;
 import com.greenfox.groottest.services.GrootService;
+import com.greenfox.groottest.services.YonduService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +30,8 @@ public class GuardianControllerTest {
 
     @MockBean
     private GrootService grootService;
+    @MockBean
+    private YonduService yonduService;
 
     @Autowired
     private MockMvc mockMvc;
@@ -50,5 +55,35 @@ public class GuardianControllerTest {
                 .andExpect(status().isBadRequest())
                 .andDo(print());
     }
+
+    @Test
+    public void getSpeed() throws Exception {
+        Double distance = 100.0;
+        Double time = 10.0;
+
+        when(yonduService.getSpeed(distance,time)).thenReturn(new Arrow(distance,time));
+        mockMvc.perform(get("/yondu")
+                .param("distance", distance.toString())
+                .param("time", time.toString()))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("distance", is(100.0)))
+                .andExpect(jsonPath("time", is(10.0)))
+                .andExpect(jsonPath("speed", is( 10.0)))
+                .andDo(print());
+    }
+
+    @Test
+    public void getSpeedWithNull() throws Exception {
+        Double distance = 100.0;
+        Double time = null;
+
+        when(yonduService.getSpeed(distance,time)).thenThrow(new NoInputException());
+        mockMvc.perform(get("/yondu")
+                .param("distance", distance.toString()))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("error", is("I am Groot!")))
+                .andDo(print());
+    }
+
 
 }
