@@ -24,8 +24,8 @@ public class LogService {
         logRepository.save(new Log(string,input));
     }
 
-    public countAllEntries() {
-       List<Log> logList = (List<Log>) logRepository.findAll();
-       logList.stream().filter(l -> )
-    }
+//    public countAllEntries() {
+//       List<Log> logList = (List<Log>) logRepository.findAll();
+//       logList.stream().filter(l -> )
+//    }
 }

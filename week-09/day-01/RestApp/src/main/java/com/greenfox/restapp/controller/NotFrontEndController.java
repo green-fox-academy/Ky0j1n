@@ -43,10 +43,10 @@ public class NotFrontEndController {
 
     }
 
-    @GetMapping("/log") {
-        public String logCount(){
-            logService.countAllEntries();
-            return
-        }
-    }
+//    @GetMapping("/log") {
+//        public String logCount(){
+//            logService.countAllEntries();
+//            return
+//        }
+//    }
 }

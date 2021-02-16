@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LogRepository extends CrudRepository <Log, Long> {
 
-    @Query( value = "SELECT * FROM log where  nativeQuery = true)
+//    @Query( value = "SELECT * FROM log where  nativeQuery = true)
 }

@@ -20,7 +20,6 @@ public class User {
     private String password;
 
     @OneToMany(cascade = CascadeType.ALL)
-
     private List<Post> postList = new ArrayList<>();
 
     public User (String userName, String password ){
