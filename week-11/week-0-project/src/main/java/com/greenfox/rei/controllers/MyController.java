@@ -1,14 +1,24 @@
 package com.greenfox.rei.controllers;
 
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class MyController {
+
+    @GetMapping("/")
+    public String getIndex() {
+        return "index";
+    }
 
     @GetMapping("/user")
     public String getUser() {
-        return ("<h1> USER </h1>");
+        return "user";
+    }
+
+    @GetMapping("/admin")
+    public String getAdmin() {
+        return "admin";
     }
 }
