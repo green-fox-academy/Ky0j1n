@@ -30,8 +30,14 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
+//    jwt token
     implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.2'
+//    javax
     compile 'javax.xml.bind:jaxb-api:2.3.0'
+//    retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+//    converter-gson
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
 }
 
 test {
