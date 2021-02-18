@@ -38,6 +38,8 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
 //    converter-gson
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+// HttpLoggingInterceptor from OkHttp to beable to use authentication to reach a given api / service
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.0'
 }
 
 test {
