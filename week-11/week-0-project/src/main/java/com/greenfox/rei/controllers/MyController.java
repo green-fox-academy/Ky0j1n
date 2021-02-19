@@ -34,17 +34,15 @@ public class MyController {
 
     @GetMapping("/asd")
     public ResponseEntity<?> getAsd() {
-        MovieService retrofit = new MovieService();
-        MovieApiRetrofit service = retrofit.createService(MovieApiRetrofit.class);
+        MovieApiRetrofit service = MovieService.createService(MovieApiRetrofit.class);
         Call<MovieWrapper> callSync = service.getMovie();
 
         try {
             Response<MovieWrapper> response = callSync.execute();
             MovieWrapper movieWrapper = response.body();
-           return new ResponseEntity<>(movieWrapper, HttpStatus.OK);
-        } catch (Exception ex) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+          return new ResponseEntity<>(movieWrapper, HttpStatus.OK);
+        } catch (Exception e) {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-
     }
 }
